@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: gray;
+            border-bottom: 1px solid #ddd;
+        }
+        .left-section, .right-section {
+            display: flex;
+            align-items: center;
+        }
+        .left-section .email {
+            margin-right: 20px;
+        }
+        .left-section .free-shipping {
+            color: black;
+        }
+        .right-section a {
+            margin-left: 10px;
+            color: black;
+            text-decoration: none;
+        }
+        .right-section .social-icons a {
+            margin-left: 5px;
+        }
+        .right-section .language, .right-section .login {
+            margin-left: 20px;
+        }
+    /*-------*/
+    
+    header {
+        background-color: #f8f8f8;
+        padding: 10px 0;
+    }
+    
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+    }/*-------------------------------*/
+    .container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-button {
+            background-color: #ffffff;
+            color: #000;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .search-bar {
+            display: flex;
+            flex-grow: 1;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .search-bar input {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-right: none;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #8bc34a;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #7cb342;
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+        .contact-info .phone-icon {
+            background-color: #ffffff;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .contact-info .phone-number {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+        .contact-info .support-time {
+            font-size: 12px;
+            color: #777;
+        }
+    /*-------------------------------*/
+    
+    aside {
+        background-color: #f0f0f0;
+        padding: 20px;
+        width: 200px;
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+    }
+    
+    .dropdown1 {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content1 {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content1 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content1 a:hover {
+            background-color: #8bc34a;
+        }
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+        .dropdown-button1 {
+            background-color: #8bc34a;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-button1:hover {
+            background-color: #7cb342;
+        }
+    
+    main {
+        margin-left: 220px;
+        padding: 20px;
+    }
+    
+    .hero {
+        height: 300px;
+        background-color: #e0f7fa;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+    
+    .hero button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    
+    .categories {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    
+    .category {
+        text-align: center;
+    }
+    
+    footer {
+        background-color: #f8f8f8;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }</style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left-section">
+            <div class="email">
+                <img src="https://img.icons8.com/material-outlined/24/000000/email.png" alt="Email Icon">
+                <a href="mailto:hello@colorlib.com" style="color: black;text-decoration:none;">hello@colorlib.com</a>
+            </div>
+            <div class="free-shipping">Free Shipping for all Order of $99</div>
+        </div>
+        <div class="right-section">
+            <div class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/facebook-new.png" alt="Facebook"></a>
+                <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/pinterest.png" alt="Pinterest"></a>
+            </div>
+            <div class="language">
+                <a href="#">English</a>
+                <img src="https://img.icons8.com/ios-filled/24/000000/usa.png" alt="USA Flag">
+            </div>
+            <div class="login">
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </div>
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <div class="dropdown">
+            <button class="dropdown-button">All Categories</button>
+            <div class="dropdown-content">
+                <a href="#">Category 1</a>
+                <a href="#">Category 2</a>
+                <a href="#">Category 3</a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="What do you need?">
+            <button>SEARCH</button>
+        </div>
+        <div class="contact-info">
+            <div class="phone-icon">
+                <img src="https://th.bing.com/th/id/OIP.yJen-VQvvV-rX2jfY7HAowHaHa?w=201&h=201&c=7&r=0&o=5&pid=1.7" alt="Phone" width="24" height="24">
+            </div>
+            <div>
+                <div class="phone-number">+65 11.188.888</div>
+                <div class="support-time">support 24/7 time</div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="dropdown1">
+            <button class="dropdown-button1">All departments</button>
+            <div class="dropdown-content1">
+                <a href="#">Fresh Meat</a>
+                <a href="#">Vegetables</a>
+                <a href="#">Fruit & Nut Gifts</a>
+                <a href="#">Fresh Berries</a>
+                <a href="#">Ocean Foods</a>
+                <a href="#">Butter & Eggs</a>
+                <a href="#">Fastfood</a>
+                <a href="#">Fresh Onion</a>
+                <a href="#">Papaya & Crisps</a>
+                <a href="#">Oatmeal</a>
+                <a href="#">Fresh Bananas</a>
+            </div>
+        </div>
+        
+    
+    <main>
+        <section class="hero" style="background-image: url('file:///C:/Users/Orange/Desktop/vegatabels/banner.jpg');">
+            <h1>Vegetable 100% Organic</h1>
+            <p>Free Pickup and Delivery Available</p>
+            <button>Shop Now</button>
+        </section>
+        <section class="categories">
+            <div class="category">
+                <img src="file:///C:/Users/Orange/Desktop/vegatabels/cat-3.jpg" alt="Vegetables">
+                <p>Vegetables</p>
+            </div>
+            <div class="category">
+                <img src="file:///C:/Users/Orange/Desktop/vegatabels/cat-4.jpg" alt="Drink Fruits">
+                <p>Drink Fruits</p>
+            </div>
+            <div class="category">
+                <img src="file:///C:/Users/Orange/Desktop/vegatabels/cat-4.jpg" alt="Drink Fruits">
+                <p>Drink Fruits</p>
+            </div>
+            <div class="category">
+                <img src="file:///C:/Users/Orange/Desktop/vegatabels/cat-1.jpg" alt="Fresh Fruit">
+                <p>Fresh Fruit</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+
